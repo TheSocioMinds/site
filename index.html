@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>From Cyber Defenders to Digital Growth Experts</title>
+  <title>The Sociominds | Cyber Defenders to Digital Growth Experts</title>
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -13,6 +13,63 @@
       background-size: 50px 50px;
       mask-image: radial-gradient(circle at center, black, transparent 80%);
     }
+
+    @keyframes scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    .logo-scroll {
+      animation: scroll 20s linear infinite;
+      display: flex;
+      width: max-content;
+    }
+
+    .logo-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      padding: 1rem;
+    }
+
+    .logo-container:hover .logo-scroll {
+      animation-play-state: paused;
+    }
+
+    .company-logo {
+      filter: brightness(0);
+      opacity: 0.7;
+      transition: all 0.3s ease;
+      height: 32px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .company-logo:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+
+    .logo-item {
+      flex: 0 0 auto;
+      min-width: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .logo-item {
+        min-width: 100px;
+        margin: 0 1rem;
+      }
+      .company-logo {
+        height: 24px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -21,6 +78,9 @@
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
       <div class="absolute inset-0 bg-[#703170] opacity-10 animate-pulse"></div>
       <div class="container mx-auto px-4 z-10">
+        <div class="flex justify-center mb-8">
+          <img src="https://thesociominds.com/wp-content/uploads/2025/02/socio-png-1.png" alt="The Sociominds" class="h-20 md:h-24" />
+        </div>
         <h1 class="text-5xl md:text-7xl font-bold text-center mb-6 bg-gradient-to-r from-[#703170] to-purple-300 bg-clip-text text-transparent">
           From Cyber Defenders to Digital Growth Experts
         </h1>
@@ -66,100 +126,114 @@
 
     <!-- Achievements Section -->
     <section class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
+      <div class="container mx-auto px-4 max-w-7xl">
         <h2 class="text-4xl font-bold text-center mb-12">Cybersecurity Achievements</h2>
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid gap-8">
           <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-            <i data-lucide="award" class="text-[#703170] mb-4 w-8 h-8"></i>
-            <h3 class="text-xl font-semibold mb-4">Protected Industry Leaders</h3>
-            <ul class="space-y-2 text-gray-700">
-              <li class="flex items-center gap-2">
-                <i data-lucide="badge-check" class="w-4 h-4"></i>
-                <a href="https://bughunters.google.com/profile/77fa3063-eb4c-41b8-8c08-051bec9cc64e" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="text-[#703170] hover:underline">
-                  Google (5 Awards)
+            <h3 class="text-2xl font-semibold mb-8 text-center">Protected Industry Leaders</h3>
+            
+            <div class="logo-container">
+              <div class="logo-scroll">
+                <!-- First set of logos with links -->
+                <a href="https://bughunters.google.com/profile/77fa3063-eb4c-41b8-8c08-051bec9cc64e" target="_blank" rel="noopener noreferrer" class="logo-item">
+                  <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" 
+                       alt="Google" 
+                       class="company-logo" />
                 </a>
-              </li>
-              <li class="flex items-center gap-2">
-                <i data-lucide="badge-check" class="w-4 h-4"></i>
-                <a href="https://www.bbc.com/backstage/security-disclosure-policy/acknowledgements/" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="text-[#703170] hover:underline">
-                  BBC (Dec 2022)
+                
+                <a href="https://www.bbc.com/backstage/security-disclosure-policy/acknowledgements/" target="_blank" rel="noopener noreferrer" class="logo-item">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/BBC_Logo_2021.svg"
+                       alt="BBC"
+                       class="company-logo" />
                 </a>
-              </li>
-              <li class="flex items-center gap-2">
-                <i data-lucide="badge-check" class="w-4 h-4"></i>
-                <a href="https://unite.un.org/content/hall-fame/list" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="text-[#703170] hover:underline">
-                  United Nations (July 2022)
+
+                <a href="https://unite.un.org/content/hall-fame/list" target="_blank" rel="noopener noreferrer" class="logo-item">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/UN_emblem_blue.svg"
+                       alt="United Nations"
+                       class="company-logo" />
                 </a>
-              </li>
-              <li class="flex items-center gap-2">
-                <i data-lucide="badge-check" class="w-4 h-4"></i>
-                <a href="https://drive.google.com/file/d/1tuDdLXPTTiK5YOrxbJxfsR9D7z6xTfmN/view" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="text-[#703170] hover:underline">
-                  Mycroft AI
+
+                <a href="https://drive.google.com/file/d/1tuDdLXPTTiK5YOrxbJxfsR9D7z6xTfmN/view" target="_blank" rel="noopener noreferrer" class="logo-item">
+                  <img src="https://brands.home-assistant.io/_/mycroft/logo.png"
+                       alt="Mycroft AI"
+                       class="company-logo" />
                 </a>
-              </li>
-              <li class="flex items-center gap-2">
-                <i data-lucide="badge-check" class="w-4 h-4"></i>
-                <a href="https://drive.google.com/file/d/1YgVWhnm2J4J2bQVC3Ay_MC5G1gyy9vwn/view" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="text-[#703170] hover:underline">
-                  Open Money
+
+                <a href="https://drexel.edu/it/security/services-processes/bug-bounty/" target="_blank" rel="noopener noreferrer" class="logo-item">
+                  <img src="https://secureia.drexel.edu/s/1683/form/16/images/logo.png"
+                       alt="Drexel University"
+                       class="company-logo" />
                 </a>
-              </li>
-              <li class="flex items-center gap-2">
-                <i data-lucide="badge-check" class="w-4 h-4"></i>
-                <a href="https://drexel.edu/it/security/services-processes/bug-bounty/" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="text-[#703170] hover:underline">
-                  Drexel University (2023)
+
+                <a href="https://drive.google.com/file/d/1hAmr0sQ9PPWPpYNe6xQa4XuehjmGUB5E/view" target="_blank" rel="noopener noreferrer" class="logo-item">
+                  <img src="https://www.licious.in/image/rebranding/svg/licious-logo.svg"
+                       alt="Licious"
+                       class="company-logo" />
                 </a>
-              </li>
-              <li class="flex items-center gap-2">
-                <i data-lucide="badge-check" class="w-4 h-4"></i>
-                <a href="https://drive.google.com/file/d/1hAmr0sQ9PPWPpYNe6xQa4XuehjmGUB5E/view" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="text-[#703170] hover:underline">
-                  Licious
+
+                <a href="https://drive.google.com/file/d/1YgVWhnm2J4J2bQVC3Ay_MC5G1gyy9vwn/view" target="_blank" rel="noopener noreferrer" class="logo-item">
+                  <img src="https://www.yatra.com/react-home/_next/static/media/logo.04fb10f6.svg"
+                       alt="Yatra"
+                       class="company-logo" />
                 </a>
-              </li>
-              <li class="flex items-center gap-2">
-                <i data-lucide="badge-check" class="w-4 h-4"></i>
-                <a href="https://drive.google.com/file/d/1DevEpe4QlVPnGQZEIsPTKt8h5G1pXq4Z/view" 
-                   target="_blank" 
-                   rel="noopener noreferrer"
-                   class="text-[#703170] hover:underline">
-                  Yatra
+
+                <!-- Duplicate set for infinite scroll -->
+                <a href="https://bughunters.google.com/profile/77fa3063-eb4c-41b8-8c08-051bec9cc64e" target="_blank" rel="noopener noreferrer" class="logo-item">
+                  <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" 
+                       alt="Google" 
+                       class="company-logo" />
                 </a>
-              </li>
-              <li class="flex items-center gap-2">
-                <i data-lucide="badge-check" class="w-4 h-4"></i>
-                <span>And many more...</span>
-              </li>
-            </ul>
+                
+                <a href="https://www.bbc.com/backstage/security-disclosure-policy/acknowledgements/" target="_blank" rel="noopener noreferrer" class="logo-item">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/BBC_Logo_2021.svg"
+                       alt="BBC"
+                       class="company-logo" />
+                </a>
+
+                <a href="https://unite.un.org/content/hall-fame/list" target="_blank" rel="noopener noreferrer" class="logo-item">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/UN_emblem_blue.svg"
+                       alt="United Nations"
+                       class="company-logo" />
+                </a>
+
+                <a href="https://drive.google.com/file/d/1tuDdLXPTTiK5YOrxbJxfsR9D7z6xTfmN/view" target="_blank" rel="noopener noreferrer" class="logo-item">
+                  <img src="https://brands.home-assistant.io/_/mycroft/logo.png"
+                       alt="Mycroft AI"
+                       class="company-logo" />
+                </a>
+
+                <a href="https://drexel.edu/it/security/services-processes/bug-bounty/" target="_blank" rel="noopener noreferrer" class="logo-item">
+                  <img src="https://secureia.drexel.edu/s/1683/form/16/images/logo.png"
+                       alt="Drexel University"
+                       class="company-logo" />
+                </a>
+
+                <a href="https://drive.google.com/file/d/1hAmr0sQ9PPWPpYNe6xQa4XuehjmGUB5E/view" target="_blank" rel="noopener noreferrer" class="logo-item">
+                  <img src="https://www.licious.in/image/rebranding/svg/licious-logo.svg"
+                       alt="Licious"
+                       class="company-logo" />
+                </a>
+
+                <a href="https://drive.google.com/file/d/1YgVWhnm2J4J2bQVC3Ay_MC5G1gyy9vwn/view" target="_blank" rel="noopener noreferrer" class="logo-item">
+                  <img src="https://www.yatra.com/react-home/_next/static/media/logo.04fb10f6.svg"
+                       alt="Yatra"
+                       class="company-logo" />
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-            <i data-lucide="lock" class="text-[#703170] mb-4 w-8 h-8"></i>
-            <h3 class="text-xl font-semibold mb-4">Law Enforcement Collaboration</h3>
-            <p class="text-gray-700">Assisted law enforcement agencies in identifying and apprehending cyber criminals, making the internet safer for everyone.</p>
-          </div>
-          <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
-            <i data-lucide="alert-triangle" class="text-[#703170] mb-4 w-8 h-8"></i>
-            <h3 class="text-xl font-semibold mb-4">Scam Prevention</h3>
-            <p class="text-gray-700">Successfully prevented loan scam suicides through awareness campaigns and direct intervention.</p>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+              <i data-lucide="lock" class="text-[#703170] mb-4 w-8 h-8"></i>
+              <h3 class="text-xl font-semibold mb-4">Law Enforcement Collaboration</h3>
+              <p class="text-gray-700">Assisted law enforcement agencies in identifying and apprehending cyber criminals, making the internet safer for everyone.</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm">
+              <i data-lucide="alert-triangle" class="text-[#703170] mb-4 w-8 h-8"></i>
+              <h3 class="text-xl font-semibold mb-4">Scam Prevention</h3>
+              <p class="text-gray-700">Successfully prevented loan scam suicides through awareness campaigns and direct intervention.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -249,6 +323,50 @@
       </div>
     </section>
 
+    <!-- Blog Research Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 max-w-7xl">
+        <h2 class="text-4xl font-bold text-center mb-12">Research Publications</h2>
+        <div class="grid md:grid-cols-2 gap-8">
+          <a href="https://medium.com/bugbountywriteup/a-quick-price-manipulation-14c9244d7dca" 
+             target="_blank"
+             rel="noopener noreferrer"
+             class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all">
+            <h3 class="text-xl font-semibold mb-4">A Quick Price Manipulation</h3>
+            <p class="text-gray-600 mb-4">Detailed analysis of a price manipulation vulnerability and its potential impact on e-commerce platforms.</p>
+            <div class="flex items-center text-[#703170]">
+              <i data-lucide="arrow-right" class="w-4 h-4 mr-2"></i>
+              <span class="text-sm">Read on Medium</span>
+            </div>
+          </a>
+
+          <a href="https://medium.com/bugbountywriteup/ssrf-in-redacted-com-how-i-found-and-reported-a-vulnerability-46df4202604f" 
+             target="_blank"
+             rel="noopener noreferrer"
+             class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all">
+            <h3 class="text-xl font-semibold mb-4">SSRF Vulnerability Discovery</h3>
+            <p class="text-gray-600 mb-4">A comprehensive walkthrough of discovering and reporting a Server-Side Request Forgery vulnerability.</p>
+            <div class="flex items-center text-[#703170]">
+              <i data-lucide="arrow-right" class="w-4 h-4 mr-2"></i>
+              <span class="text-sm">Read on Medium</span>
+            </div>
+          </a>
+
+          <a href="https://medium.com/bugbountywriteup/get-blind-xss-within-5-minutes-100-9718bd056570" 
+             target="_blank"
+             rel="noopener noreferrer"
+             class="bg-white p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all">
+            <h3 class="text-xl font-semibold mb-4">Quick Guide to Blind XSS</h3>
+            <p class="text-gray-600 mb-4">Learn how to identify and exploit Blind Cross-Site Scripting vulnerabilities in just 5 minutes.</p>
+            <div class="flex items-center text-[#703170]">
+              <i data-lucide="arrow-right" class="w-4 h-4 mr-2"></i>
+              <span class="text-sm">Read on Medium</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section class="py-20 bg-white">
       <div class="container mx-auto px-4 text-center">
@@ -263,6 +381,16 @@
       </div>
     </section>
   </div>
+
+  <!-- Footer with Copyright -->
+  <footer class="py-8 bg-gray-50">
+    <div class="container mx-auto px-4 max-w-7xl">
+      <div class="text-center text-gray-600">
+        <p>&copy; 2024 The Sociominds. All rights reserved.</p>
+        <p class="mt-2 text-sm">Securing the digital world through expertise and innovation.</p>
+      </div>
+    </div>
+  </footer>
 
   <script>
     // Initialize Lucide icons
