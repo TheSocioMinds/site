@@ -27,7 +27,7 @@
 
     .logo-container {
       width: 100%;
-      max-width: 800px;
+      max-width: 100%;
       margin: 0 auto;
       overflow: hidden;
       position: relative;
@@ -42,7 +42,7 @@
       filter: brightness(0);
       opacity: 0.7;
       transition: all 0.3s ease;
-      height: 24px;
+      height: 20px;
       width: auto;
       object-fit: contain;
     }
@@ -54,28 +54,54 @@
 
     .logo-item {
       flex: 0 0 auto;
-      min-width: 100px;
+      min-width: 80px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 0 1rem;
+      margin: 0 0.75rem;
     }
 
     @media (max-width: 768px) {
       .logo-item {
-        min-width: 70px;
+        min-width: 60px;
         margin: 0 0.5rem;
       }
       .company-logo {
-        height: 18px;
+        height: 16px;
       }
       h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         line-height: 1.2;
       }
+      h2 {
+        font-size: 1.75rem;
+      }
+      h3 {
+        font-size: 1.25rem;
+      }
       .container {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+      }
+      section {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-item {
+        min-width: 50px;
+        margin: 0 0.25rem;
+      }
+      .company-logo {
+        height: 14px;
+      }
+      h1 {
+        font-size: 1.75rem;
+      }
+      h2 {
+        font-size: 1.5rem;
       }
     }
   </style>
@@ -83,20 +109,20 @@
 <body>
   <div class="min-h-screen bg-white text-black">
     <!-- Hero Section -->
-    <section class="relative min-h-[80vh] flex items-center justify-center overflow-hidden py-8">
+    <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden py-6 md:py-8">
       <div class="absolute inset-0 bg-[#703170] opacity-10 animate-pulse"></div>
-      <div class="container mx-auto px-4 z-10">
-        <div class="flex justify-center mb-6">
-          <img src="https://thesociominds.com/wp-content/uploads/2025/02/socio-png-1.png" alt="The Sociominds" class="h-16 md:h-24" />
+      <div class="container mx-auto px-3 md:px-4 z-10">
+        <div class="flex justify-center mb-4 md:mb-6">
+          <img src="https://thesociominds.com/wp-content/uploads/2025/02/socio-png-1.png" alt="The Sociominds" class="h-12 md:h-16 lg:h-24" />
         </div>
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-center mb-4 bg-gradient-to-r from-[#703170] to-purple-300 bg-clip-text text-transparent">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-3 md:mb-4 bg-gradient-to-r from-[#703170] to-purple-300 bg-clip-text text-transparent">
           From Cyber Defenders to Digital Growth Experts
         </h1>
-        <p class="text-lg md:text-xl text-center text-gray-700 max-w-3xl mx-auto">
+        <p class="text-base md:text-lg lg:text-xl text-center text-gray-700 max-w-3xl mx-auto">
           Securing the digital world, one company at a time
         </p>
-        <div class="mt-8 flex justify-center">
-          <a href="#mission" class="bg-[#703170] hover:bg-[#8a4b8a] text-white px-6 py-2 md:px-8 md:py-3 rounded-full flex items-center gap-2 transition-all text-sm md:text-base">
+        <div class="mt-6 md:mt-8 flex justify-center">
+          <a href="#mission" class="bg-[#703170] hover:bg-[#8a4b8a] text-white px-4 py-2 md:px-6 md:py-2 lg:px-8 lg:py-3 rounded-full flex items-center gap-2 transition-all text-sm md:text-base">
             Learn Our Story <i data-lucide="chevron-right" class="w-4 h-4 md:w-5 md:h-5"></i>
           </a>
         </div>
@@ -105,40 +131,40 @@
     </section>
 
     <!-- Mission Section -->
-    <section id="mission" class="py-12 md:py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Our Mission</h2>
-        <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          <div class="space-y-6">
+    <section id="mission" class="py-8 md:py-12 lg:py-20 bg-white">
+      <div class="container mx-auto px-3 md:px-4">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 lg:mb-12">Our Mission</h2>
+        <div class="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
+          <div class="space-y-4 md:space-y-6">
             <div class="flex items-start gap-3 md:gap-4">
-              <i data-lucide="shield" class="text-[#703170] mt-1 w-5 h-5 md:w-6 md:h-6"></i>
+              <i data-lucide="shield" class="text-[#703170] mt-1 w-5 h-5 md:w-6 md:h-6 flex-shrink-0"></i>
               <div>
-                <h3 class="text-lg md:text-xl font-semibold mb-1 md:mb-2">Starting as Cyber Defenders</h3>
+                <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2">Starting as Cyber Defenders</h3>
                 <p class="text-gray-700 text-sm md:text-base">We began our journey by securing top companies worldwide, protecting their digital assets and user data.</p>
               </div>
             </div>
             <div class="flex items-start gap-3 md:gap-4">
-              <i data-lucide="users" class="text-[#703170] mt-1 w-5 h-5 md:w-6 md:h-6"></i>
+              <i data-lucide="users" class="text-[#703170] mt-1 w-5 h-5 md:w-6 md:h-6 flex-shrink-0"></i>
               <div>
-                <h3 class="text-lg md:text-xl font-semibold mb-1 md:mb-2">Evolution to Growth Partners</h3>
+                <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2">Evolution to Growth Partners</h3>
                 <p class="text-gray-700 text-sm md:text-base">Today, we help businesses grow digitally while maintaining robust security measures.</p>
               </div>
             </div>
           </div>
           <div class="flex justify-center">
-            <i data-lucide="shield" class="text-[#703170] w-32 h-32 md:w-48 md:h-48 opacity-20"></i>
+            <i data-lucide="shield" class="text-[#703170] w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 opacity-20"></i>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Achievements Section -->
-    <section class="py-12 md:py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Cybersecurity Achievements</h2>
-        <div class="grid gap-6 md:gap-8">
-          <div class="bg-white p-4 md:p-6 rounded-lg border border-gray-200 shadow-sm max-w-3xl mx-auto">
-            <h3 class="text-xl md:text-2xl font-semibold mb-4 text-center">Protected Industry Leaders</h3>
+    <section class="py-8 md:py-12 lg:py-20 bg-gray-50">
+      <div class="container mx-auto px-3 md:px-4">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 lg:mb-12">Cybersecurity Achievements</h2>
+        <div class="grid gap-4 md:gap-6 lg:gap-8">
+          <div class="bg-white p-3 md:p-4 lg:p-6 rounded-lg border border-gray-200 shadow-sm max-w-3xl mx-auto">
+            <h3 class="text-lg md:text-xl lg:text-2xl font-semibold mb-3 md:mb-4 text-center">Protected Industry Leaders</h3>
             
             <div class="logo-container">
               <div class="logo-scroll">
@@ -231,16 +257,16 @@
             </div>
           </div>
 
-          <div class="grid md:grid-cols-2 gap-6 md:gap-8 max-w-3xl mx-auto">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 max-w-3xl mx-auto">
             <div class="bg-white p-3 md:p-4 rounded-lg border border-gray-200 shadow-sm">
-              <i data-lucide="lock" class="text-[#703170] mb-2 md:mb-3 w-5 h-5 md:w-6 md:h-6"></i>
-              <h3 class="text-lg md:text-xl font-semibold mb-2">Law Enforcement Collaboration</h3>
-              <p class="text-gray-700 text-sm">Assisted law enforcement agencies in identifying and apprehending cyber criminals, making the internet safer for everyone.</p>
+              <i data-lucide="lock" class="text-[#703170] mb-2 w-5 h-5 md:w-6 md:h-6"></i>
+              <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2">Law Enforcement Collaboration</h3>
+              <p class="text-gray-700 text-xs md:text-sm">Assisted law enforcement agencies in identifying and apprehending cyber criminals, making the internet safer for everyone.</p>
             </div>
             <div class="bg-white p-3 md:p-4 rounded-lg border border-gray-200 shadow-sm">
-              <i data-lucide="alert-triangle" class="text-[#703170] mb-2 md:mb-3 w-5 h-5 md:w-6 md:h-6"></i>
-              <h3 class="text-lg md:text-xl font-semibold mb-2">Scam Prevention</h3>
-              <p class="text-gray-700 text-sm">Successfully prevented loan scam suicides through awareness campaigns and direct intervention.</p>
+              <i data-lucide="alert-triangle" class="text-[#703170] mb-2 w-5 h-5 md:w-6 md:h-6"></i>
+              <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2">Scam Prevention</h3>
+              <p class="text-gray-700 text-xs md:text-sm">Successfully prevented loan scam suicides through awareness campaigns and direct intervention.</p>
             </div>
           </div>
         </div>
@@ -248,48 +274,48 @@
     </section>
 
     <!-- Case Studies Section -->
-    <section class="py-12 md:py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Case Studies & Impact</h2>
-        <div class="grid gap-6 md:gap-8">
-          <div class="bg-white p-6 md:p-8 rounded-lg border border-gray-200 shadow-sm">
-            <div class="flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
-              <div class="bg-gray-50 p-3 rounded-lg self-start">
-                <i data-lucide="book-open" class="text-[#703170] w-6 h-6"></i>
+    <section class="py-8 md:py-12 lg:py-20 bg-white">
+      <div class="container mx-auto px-3 md:px-4">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 lg:mb-12">Case Studies & Impact</h2>
+        <div class="grid gap-4 md:gap-6 lg:gap-8 max-w-3xl mx-auto">
+          <div class="bg-white p-4 md:p-6 lg:p-8 rounded-lg border border-gray-200 shadow-sm">
+            <div class="flex flex-col md:flex-row md:items-start gap-3 md:gap-4 lg:gap-6">
+              <div class="bg-gray-50 p-2 md:p-3 rounded-lg self-start">
+                <i data-lucide="book-open" class="text-[#703170] w-5 h-5 md:w-6 md:h-6"></i>
               </div>
               <div>
-                <h3 class="text-xl md:text-2xl font-semibold mb-2 md:mb-3">Loan Scam Awareness Campaign</h3>
-                <p class="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">Educated thousands of individuals about online loan scams, preventing countless frauds.</p>
-                <div class="bg-gray-50 px-3 py-2 md:px-4 rounded-lg inline-block">
-                  <p class="text-[#703170] font-semibold text-sm md:text-base">Reached 100,000+ people through social media and workshops</p>
+                <h3 class="text-lg md:text-xl lg:text-2xl font-semibold mb-1 md:mb-2 lg:mb-3">Loan Scam Awareness Campaign</h3>
+                <p class="text-gray-700 mb-2 md:mb-3 lg:mb-4 text-xs md:text-sm lg:text-base">Educated thousands of individuals about online loan scams, preventing countless frauds.</p>
+                <div class="bg-gray-50 px-2 py-1 md:px-3 md:py-2 rounded-lg inline-block">
+                  <p class="text-[#703170] font-semibold text-xs md:text-sm">Reached 100,000+ people through social media and workshops</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="bg-white p-6 md:p-8 rounded-lg border border-gray-200 shadow-sm">
-            <div class="flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
-              <div class="bg-gray-50 p-3 rounded-lg self-start">
-                <i data-lucide="users" class="text-[#703170] w-6 h-6"></i>
+          <div class="bg-white p-4 md:p-6 lg:p-8 rounded-lg border border-gray-200 shadow-sm">
+            <div class="flex flex-col md:flex-row md:items-start gap-3 md:gap-4 lg:gap-6">
+              <div class="bg-gray-50 p-2 md:p-3 rounded-lg self-start">
+                <i data-lucide="users" class="text-[#703170] w-5 h-5 md:w-6 md:h-6"></i>
               </div>
               <div>
-                <h3 class="text-xl md:text-2xl font-semibold mb-2 md:mb-3">Victim Support Program</h3>
-                <p class="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">Provided direct support to cyber fraud victims, helping them recover and prevent future incidents.</p>
-                <div class="bg-gray-50 px-3 py-2 md:px-4 rounded-lg inline-block">
-                  <p class="text-[#703170] font-semibold text-sm md:text-base">Helped 500+ victims recover from cyber fraud</p>
+                <h3 class="text-lg md:text-xl lg:text-2xl font-semibold mb-1 md:mb-2 lg:mb-3">Victim Support Program</h3>
+                <p class="text-gray-700 mb-2 md:mb-3 lg:mb-4 text-xs md:text-sm lg:text-base">Provided direct support to cyber fraud victims, helping them recover and prevent future incidents.</p>
+                <div class="bg-gray-50 px-2 py-1 md:px-3 md:py-2 rounded-lg inline-block">
+                  <p class="text-[#703170] font-semibold text-xs md:text-sm">Helped 500+ victims recover from cyber fraud</p>
                 </div>
               </div>
             </div>
           </div>
-          <div class="bg-white p-6 md:p-8 rounded-lg border border-gray-200 shadow-sm">
-            <div class="flex flex-col md:flex-row md:items-start gap-4 md:gap-6">
-              <div class="bg-gray-50 p-3 rounded-lg self-start">
-                <i data-lucide="shield" class="text-[#703170] w-6 h-6"></i>
+          <div class="bg-white p-4 md:p-6 lg:p-8 rounded-lg border border-gray-200 shadow-sm">
+            <div class="flex flex-col md:flex-row md:items-start gap-3 md:gap-4 lg:gap-6">
+              <div class="bg-gray-50 p-2 md:p-3 rounded-lg self-start">
+                <i data-lucide="shield" class="text-[#703170] w-5 h-5 md:w-6 md:h-6"></i>
               </div>
               <div>
-                <h3 class="text-xl md:text-2xl font-semibold mb-2 md:mb-3">Law Enforcement Training</h3>
-                <p class="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">Conducted specialized training sessions for police departments on cyber crime investigation.</p>
-                <div class="bg-gray-50 px-3 py-2 md:px-4 rounded-lg inline-block">
-                  <p class="text-[#703170] font-semibold text-sm md:text-base">Provided comprehensive cybersecurity training to law enforcement</p>
+                <h3 class="text-lg md:text-xl lg:text-2xl font-semibold mb-1 md:mb-2 lg:mb-3">Law Enforcement Training</h3>
+                <p class="text-gray-700 mb-2 md:mb-3 lg:mb-4 text-xs md:text-sm lg:text-base">Conducted specialized training sessions for police departments on cyber crime investigation.</p>
+                <div class="bg-gray-50 px-2 py-1 md:px-3 md:py-2 rounded-lg inline-block">
+                  <p class="text-[#703170] font-semibold text-xs md:text-sm">Provided comprehensive cybersecurity training to law enforcement</p>
                 </div>
               </div>
             </div>
@@ -299,32 +325,32 @@
     </section>
 
     <!-- Media & Recognition -->
-    <section class="py-12 md:py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Media & Recognition</h2>
-        <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+    <section class="py-8 md:py-12 lg:py-20 bg-gray-50">
+      <div class="container mx-auto px-3 md:px-4">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 lg:mb-12">Media & Recognition</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-3xl mx-auto">
           <a 
             href="https://www.youtube.com/watch?v=VY1PQfu4PKc&t=1330s&pp=ygUfbG9hbiBhcHAgc2NhbSB0YW1pbCBiZWhpbmR3b29kcw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-3 md:gap-4 p-4 md:p-6 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all"
+            class="flex items-center gap-3 md:gap-4 p-3 md:p-4 lg:p-6 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all"
           >
-            <i data-lucide="youtube" class="text-[#703170] w-6 h-6 md:w-8 md:h-8"></i>
+            <i data-lucide="youtube" class="text-[#703170] w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 flex-shrink-0"></i>
             <div>
-              <h3 class="text-lg md:text-xl font-semibold mb-1 md:mb-2">YouTube Feature</h3>
-              <p class="text-gray-700 text-sm md:text-base">Watch our detailed coverage on loan app scams</p>
+              <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2">YouTube Feature</h3>
+              <p class="text-gray-700 text-xs md:text-sm">Watch our detailed coverage on loan app scams</p>
             </div>
           </a>
           <a 
             href="https://m.timesofindia.com/city/coimbatore/loan-app-firm-employees-arrested-for-harassing-and-cheating-woman-near-coimbatore/amp_articleshow/90377035.cms"
             target="_blank"
             rel="noopener noreferrer"
-            class="flex items-center gap-3 md:gap-4 p-4 md:p-6 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all"
+            class="flex items-center gap-3 md:gap-4 p-3 md:p-4 lg:p-6 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all"
           >
-            <i data-lucide="newspaper" class="text-[#703170] w-6 h-6 md:w-8 md:h-8"></i>
+            <i data-lucide="newspaper" class="text-[#703170] w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 flex-shrink-0"></i>
             <div>
-              <h3 class="text-lg md:text-xl font-semibold mb-1 md:mb-2">Times of India Coverage</h3>
-              <p class="text-gray-700 text-sm md:text-base">Read about our role in catching loan app scammers</p>
+              <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2">Times of India Coverage</h3>
+              <p class="text-gray-700 text-xs md:text-sm">Read about our role in catching loan app scammers</p>
             </div>
           </a>
         </div>
@@ -332,43 +358,43 @@
     </section>
 
     <!-- Blog Research Section -->
-    <section class="py-12 md:py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12">Research Publications</h2>
-        <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+    <section class="py-8 md:py-12 lg:py-20 bg-white">
+      <div class="container mx-auto px-3 md:px-4">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 lg:mb-12">Research Publications</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-3xl mx-auto">
           <a href="https://medium.com/bugbountywriteup/a-quick-price-manipulation-14c9244d7dca" 
              target="_blank"
              rel="noopener noreferrer"
-             class="bg-white p-4 md:p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all">
-            <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-4">A Quick Price Manipulation</h3>
-            <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">Detailed analysis of a price manipulation vulnerability and its potential impact on e-commerce platforms.</p>
+             class="bg-white p-3 md:p-4 lg:p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all">
+            <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2 lg:mb-4">A Quick Price Manipulation</h3>
+            <p class="text-gray-600 mb-2 md:mb-3 lg:mb-4 text-xs md:text-sm">Detailed analysis of a price manipulation vulnerability and its potential impact on e-commerce platforms.</p>
             <div class="flex items-center text-[#703170]">
-              <i data-lucide="arrow-right" class="w-4 h-4 mr-2"></i>
-              <span class="text-xs md:text-sm">Read on Medium</span>
+              <i data-lucide="arrow-right" class="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2"></i>
+              <span class="text-xs">Read on Medium</span>
             </div>
           </a>
 
           <a href="https://medium.com/bugbountywriteup/ssrf-in-redacted-com-how-i-found-and-reported-a-vulnerability-46df4202604f" 
              target="_blank"
              rel="noopener noreferrer"
-             class="bg-white p-4 md:p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all">
-            <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-4">SSRF Vulnerability Discovery</h3>
-            <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">A comprehensive walkthrough of discovering and reporting a Server-Side Request Forgery vulnerability.</p>
+             class="bg-white p-3 md:p-4 lg:p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all">
+            <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2 lg:mb-4">SSRF Vulnerability Discovery</h3>
+            <p class="text-gray-600 mb-2 md:mb-3 lg:mb-4 text-xs md:text-sm">A comprehensive walkthrough of discovering and reporting a Server-Side Request Forgery vulnerability.</p>
             <div class="flex items-center text-[#703170]">
-              <i data-lucide="arrow-right" class="w-4 h-4 mr-2"></i>
-              <span class="text-xs md:text-sm">Read on Medium</span>
+              <i data-lucide="arrow-right" class="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2"></i>
+              <span class="text-xs">Read on Medium</span>
             </div>
           </a>
 
           <a href="https://medium.com/bugbountywriteup/get-blind-xss-within-5-minutes-100-9718bd056570" 
              target="_blank"
              rel="noopener noreferrer"
-             class="bg-white p-4 md:p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all">
-            <h3 class="text-lg md:text-xl font-semibold mb-2 md:mb-4">Quick Guide to Blind XSS</h3>
-            <p class="text-gray-600 mb-3 md:mb-4 text-sm md:text-base">Learn how to identify and exploit Blind Cross-Site Scripting vulnerabilities in just 5 minutes.</p>
+             class="bg-white p-3 md:p-4 lg:p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all">
+            <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2 lg:mb-4">Quick Guide to Blind XSS</h3>
+            <p class="text-gray-600 mb-2 md:mb-3 lg:mb-4 text-xs md:text-sm">Learn how to identify and exploit Blind Cross-Site Scripting vulnerabilities in just 5 minutes.</p>
             <div class="flex items-center text-[#703170]">
-              <i data-lucide="arrow-right" class="w-4 h-4 mr-2"></i>
-              <span class="text-xs md:text-sm">Read on Medium</span>
+              <i data-lucide="arrow-right" class="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2"></i>
+              <span class="text-xs">Read on Medium</span>
             </div>
           </a>
         </div>
@@ -376,14 +402,14 @@
     </section>
 
     <!-- Contact Section -->
-    <section class="py-12 md:py-20 bg-white">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8 md:mb-12">Contact Us</h2>
+    <section class="py-8 md:py-12 lg:py-20 bg-white">
+      <div class="container mx-auto px-3 md:px-4 text-center">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12">Contact Us</h2>
         <a 
           href="mailto:elevate@thesociominds.com"
-          class="inline-flex items-center gap-2 bg-[#703170] hover:bg-[#8a4b8a] text-white px-6 py-2 md:px-8 md:py-3 rounded-full transition-all text-sm md:text-base"
+          class="inline-flex items-center gap-2 bg-[#703170] hover:bg-[#8a4b8a] text-white px-4 py-2 md:px-6 md:py-2 lg:px-8 lg:py-3 rounded-full transition-all text-xs md:text-sm lg:text-base"
         >
-          <i data-lucide="mail" class="w-4 h-4 md:w-5 md:h-5"></i>
+          <i data-lucide="mail" class="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5"></i>
           elevate@thesociominds.com
         </a>
       </div>
@@ -391,11 +417,11 @@
   </div>
 
   <!-- Footer with Copyright -->
-  <footer class="py-6 md:py-8 bg-gray-50">
-    <div class="container mx-auto px-4">
+  <footer class="py-4 md:py-6 lg:py-8 bg-gray-50">
+    <div class="container mx-auto px-3 md:px-4">
       <div class="text-center text-gray-600">
-        <p class="text-sm md:text-base">&copy; 2024 The Sociominds. All rights reserved.</p>
-        <p class="mt-1 md:mt-2 text-xs md:text-sm">Securing the digital world through expertise and innovation.</p>
+        <p class="text-xs md:text-sm lg:text-base">&copy; 2024 The Sociominds. All rights reserved.</p>
+        <p class="mt-1 md:mt-2 text-xs">Securing the digital world through expertise and innovation.</p>
       </div>
     </div>
   </footer>
