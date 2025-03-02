@@ -271,18 +271,24 @@
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-12 text-center">Cybersecurity Services</h2>
       <div class="max-w-2xl mx-auto">
-        <form class="space-y-6">
+        <form action="https://formsubmit.co/thesociominds@gmail.com" method="POST" class="space-y-6">
+          <!-- FormSubmit configuration -->
+          <input type="hidden" name="_subject" value="New Cybersecurity Service Request">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://thesociominds.com/thank-you">
+          
           <div>
             <label for="name" class="block text-white font-medium mb-2">Name</label>
-            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" placeholder="Your name">
+            <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" placeholder="Your name" required>
           </div>
           <div>
             <label for="email" class="block text-white font-medium mb-2">Email</label>
-            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" placeholder="Your email">
+            <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" placeholder="Your email" required>
           </div>
           <div>
             <label for="service" class="block text-white font-medium mb-2">Service Required</label>
-            <select id="service" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent">
+            <select id="service" name="service" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" required>
               <option value="">Select a service</option>
               <option value="security-audit">Security Audit</option>
               <option value="penetration-testing">Penetration Testing</option>
@@ -293,7 +299,7 @@
           </div>
           <div>
             <label for="message" class="block text-white font-medium mb-2">Message</label>
-            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" placeholder="Describe your requirements"></textarea>
+            <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" placeholder="Describe your requirements" required></textarea>
           </div>
           <div class="flex justify-end">
             <button type="submit" class="bg-white text-black font-semibold px-6 py-3 rounded-md hover:bg-gray-200 transition duration-300">Submit Request</button>
@@ -308,10 +314,13 @@
   </div>
 
   <script>
-    // Form submission
+    // Form submission feedback
     document.querySelector('form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Thank you for your interest! We will contact you shortly.');
+      // The form will now submit to the email address via formsubmit.co
+      // This is just for user feedback
+      setTimeout(function() {
+        alert('Thank you for your interest! Your request has been sent.');
+      }, 500);
     });
   </script>
 </body>
