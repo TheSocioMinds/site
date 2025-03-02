@@ -1,448 +1,317 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Sociominds | Cyber Defenders to Digital Growth Experts</title>
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TheSocioMinds - Cyber Defenders & Digital Growth Experts</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <style>
-    .bg-grid-pattern {
-      background-image: linear-gradient(to right, #703170 1px, transparent 1px),
-        linear-gradient(to bottom, #703170 1px, transparent 1px);
-      background-size: 50px 50px;
-      mask-image: radial-gradient(circle at center, black, transparent 80%);
+    :root {
+      --primary-color: #703170;
     }
-
-    @keyframes scroll {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
+    
+    body {
+      font-family: 'Inter', sans-serif;
     }
-
-    .logo-scroll {
-      animation: scroll 20s linear infinite;
-      display: flex;
-      width: max-content;
+    
+    .bg-primary {
+      background-color: var(--primary-color);
     }
-
-    .logo-container {
-      width: 100%;
-      max-width: 100%;
-      margin: 0 auto;
-      overflow: hidden;
+    
+    .text-primary {
+      color: var(--primary-color);
+    }
+    
+    .border-primary {
+      border-color: var(--primary-color);
+    }
+    
+    .achievement-card {
+      transition: transform 0.3s ease;
+    }
+    
+    .achievement-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .section-heading {
       position: relative;
-      padding: 0.5rem;
     }
-
-    .logo-container:hover .logo-scroll {
-      animation-play-state: paused;
-    }
-
-    .company-logo {
-      filter: brightness(0);
-      opacity: 0.7;
-      transition: all 0.3s ease;
-      height: 20px;
-      width: auto;
-      object-fit: contain;
-    }
-
-    .company-logo:hover {
-      opacity: 1;
-      transform: scale(1.05);
-    }
-
-    .logo-item {
-      flex: 0 0 auto;
-      min-width: 80px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 0 0.75rem;
-    }
-
-    @media (max-width: 768px) {
-      .logo-item {
-        min-width: 60px;
-        margin: 0 0.5rem;
-      }
-      .company-logo {
-        height: 16px;
-      }
-      h1 {
-        font-size: 2rem;
-        line-height: 1.2;
-      }
-      h2 {
-        font-size: 1.75rem;
-      }
-      h3 {
-        font-size: 1.25rem;
-      }
-      .container {
-        padding-left: 0.75rem;
-        padding-right: 0.75rem;
-      }
-      section {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .logo-item {
-        min-width: 50px;
-        margin: 0 0.25rem;
-      }
-      .company-logo {
-        height: 14px;
-      }
-      h1 {
-        font-size: 1.75rem;
-      }
-      h2 {
-        font-size: 1.5rem;
-      }
+    
+    .section-heading::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: var(--primary-color);
     }
   </style>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-  <div class="min-h-screen bg-white text-black">
-    <!-- Hero Section -->
-    <section class="relative min-h-[70vh] flex items-center justify-center overflow-hidden py-6 md:py-8">
-      <div class="absolute inset-0 bg-[#703170] opacity-10 animate-pulse"></div>
-      <div class="container mx-auto px-3 md:px-4 z-10">
-        <div class="flex justify-center mb-4 md:mb-6">
-          <img src="https://thesociominds.com/wp-content/uploads/2025/02/socio-png-1.png" alt="The Sociominds" class="h-12 md:h-16 lg:h-24" />
-        </div>
-        <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-3 md:mb-4 bg-gradient-to-r from-[#703170] to-purple-300 bg-clip-text text-transparent">
-          From Cyber Defenders to Digital Growth Experts
-        </h1>
-        <p class="text-base md:text-lg lg:text-xl text-center text-gray-700 max-w-3xl mx-auto">
-          Securing the digital world, one company at a time
-        </p>
-        <div class="mt-6 md:mt-8 flex justify-center">
-          <a href="#mission" class="bg-[#703170] hover:bg-[#8a4b8a] text-white px-4 py-2 md:px-6 md:py-2 lg:px-8 lg:py-3 rounded-full flex items-center gap-2 transition-all text-sm md:text-base">
-            Learn Our Story <i data-lucide="chevron-right" class="w-4 h-4 md:w-5 md:h-5"></i>
-          </a>
-        </div>
-      </div>
-      <div class="absolute inset-0 bg-grid-pattern opacity-10"></div>
-    </section>
-
-    <!-- Mission Section -->
-    <section id="mission" class="py-8 md:py-12 lg:py-20 bg-white">
-      <div class="container mx-auto px-3 md:px-4">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 lg:mb-12">Our Mission</h2>
-        <div class="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12 items-center">
-          <div class="space-y-4 md:space-y-6">
-            <div class="flex items-start gap-3 md:gap-4">
-              <i data-lucide="shield" class="text-[#703170] mt-1 w-5 h-5 md:w-6 md:h-6 flex-shrink-0"></i>
-              <div>
-                <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2">Starting as Cyber Defenders</h3>
-                <p class="text-gray-700 text-sm md:text-base">We began our journey by securing top companies worldwide, protecting their digital assets and user data.</p>
-              </div>
-            </div>
-            <div class="flex items-start gap-3 md:gap-4">
-              <i data-lucide="users" class="text-[#703170] mt-1 w-5 h-5 md:w-6 md:h-6 flex-shrink-0"></i>
-              <div>
-                <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2">Evolution to Growth Partners</h3>
-                <p class="text-gray-700 text-sm md:text-base">Today, we help businesses grow digitally while maintaining robust security measures.</p>
-              </div>
-            </div>
-          </div>
-          <div class="flex justify-center">
-            <i data-lucide="shield" class="text-[#703170] w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 opacity-20"></i>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section class="py-8 md:py-12 lg:py-20 bg-gray-50">
-      <div class="container mx-auto px-3 md:px-4">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 lg:mb-12">Cybersecurity Achievements</h2>
-        <div class="grid gap-4 md:gap-6 lg:gap-8">
-          <div class="bg-white p-3 md:p-4 lg:p-6 rounded-lg border border-gray-200 shadow-sm max-w-3xl mx-auto">
-            <h3 class="text-lg md:text-xl lg:text-2xl font-semibold mb-3 md:mb-4 text-center">Protected Industry Leaders</h3>
-            
-            <div class="logo-container">
-              <div class="logo-scroll">
-                <!-- First set of logos with links -->
-                <a href="https://bughunters.google.com/profile/77fa3063-eb4c-41b8-8c08-051bec9cc64e" target="_blank" rel="noopener noreferrer" class="logo-item">
-                  <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" 
-                       alt="Google" 
-                       class="company-logo" />
-                </a>
-                
-                <a href="https://www.bbc.com/backstage/security-disclosure-policy/acknowledgements/" target="_blank" rel="noopener noreferrer" class="logo-item">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/BBC_Logo_2021.svg"
-                       alt="BBC"
-                       class="company-logo" />
-                </a>
-
-                <a href="https://unite.un.org/content/hall-fame/list" target="_blank" rel="noopener noreferrer" class="logo-item">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/UN_emblem_blue.svg"
-                       alt="United Nations"
-                       class="company-logo" />
-                </a>
-
-                <a href="https://drive.google.com/file/d/1tuDdLXPTTiK5YOrxbJxfsR9D7z6xTfmN/view" target="_blank" rel="noopener noreferrer" class="logo-item">
-                  <img src="https://brands.home-assistant.io/_/mycroft/logo.png"
-                       alt="Mycroft AI"
-                       class="company-logo" />
-                </a>
-
-                <a href="https://drexel.edu/it/security/services-processes/bug-bounty/" target="_blank" rel="noopener noreferrer" class="logo-item">
-                  <img src="https://secureia.drexel.edu/s/1683/form/16/images/logo.png"
-                       alt="Drexel University"
-                       class="company-logo" />
-                </a>
-
-                <a href="https://drive.google.com/file/d/1hAmr0sQ9PPWPpYNe6xQa4XuehjmGUB5E/view" target="_blank" rel="noopener noreferrer" class="logo-item">
-                  <img src="https://www.licious.in/image/rebranding/svg/licious-logo.svg"
-                       alt="Licious"
-                       class="company-logo" />
-                </a>
-
-                <a href="https://drive.google.com/file/d/1YgVWhnm2J4J2bQVC3Ay_MC5G1gyy9vwn/view" target="_blank" rel="noopener noreferrer" class="logo-item">
-                  <img src="https://www.yatra.com/react-home/_next/static/media/logo.04fb10f6.svg"
-                       alt="Yatra"
-                       class="company-logo" />
-                </a>
-
-                <!-- Duplicate set for infinite scroll -->
-                <a href="https://bughunters.google.com/profile/77fa3063-eb4c-41b8-8c08-051bec9cc64e" target="_blank" rel="noopener noreferrer" class="logo-item">
-                  <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" 
-                       alt="Google" 
-                       class="company-logo" />
-                </a>
-                
-                <a href="https://www.bbc.com/backstage/security-disclosure-policy/acknowledgements/" target="_blank" rel="noopener noreferrer" class="logo-item">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/BBC_Logo_2021.svg"
-                       alt="BBC"
-                       class="company-logo" />
-                </a>
-
-                <a href="https://unite.un.org/content/hall-fame/list" target="_blank" rel="noopener noreferrer" class="logo-item">
-                  <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/UN_emblem_blue.svg"
-                       alt="United Nations"
-                       class="company-logo" />
-                </a>
-
-                <a href="https://drive.google.com/file/d/1tuDdLXPTTiK5YOrxbJxfsR9D7z6xTfmN/view" target="_blank" rel="noopener noreferrer" class="logo-item">
-                  <img src="https://brands.home-assistant.io/_/mycroft/logo.png"
-                       alt="Mycroft AI"
-                       class="company-logo" />
-                </a>
-
-                <a href="https://drexel.edu/it/security/services-processes/bug-bounty/" target="_blank" rel="noopener noreferrer" class="logo-item">
-                  <img src="https://secureia.drexel.edu/s/1683/form/16/images/logo.png"
-                       alt="Drexel University"
-                       class="company-logo" />
-                </a>
-
-                <a href="https://drive.google.com/file/d/1hAmr0sQ9PPWPpYNe6xQa4XuehjmGUB5E/view" target="_blank" rel="noopener noreferrer" class="logo-item">
-                  <img src="https://www.licious.in/image/rebranding/svg/licious-logo.svg"
-                       alt="Licious"
-                       class="company-logo" />
-                </a>
-
-                <a href="https://drive.google.com/file/d/1YgVWhnm2J4J2bQVC3Ay_MC5G1gyy9vwn/view" target="_blank" rel="noopener noreferrer" class="logo-item">
-                  <img src="https://www.yatra.com/react-home/_next/static/media/logo.04fb10f6.svg"
-                       alt="Yatra"
-                       class="company-logo" />
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Changed to stack vertically on mobile, horizontal on desktop -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 max-w-3xl mx-auto">
-            <div class="bg-white p-3 md:p-4 rounded-lg border border-gray-200 shadow-sm">
-              <i data-lucide="lock" class="text-[#703170] mb-2 w-5 h-5 md:w-6 md:h-6"></i>
-              <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2">Law Enforcement Collaboration</h3>
-              <p class="text-gray-700 text-xs md:text-sm">Assisted law enforcement agencies in identifying and apprehending cyber criminals, making the internet safer for everyone.</p>
-            </div>
-            <div class="bg-white p-3 md:p-4 rounded-lg border border-gray-200 shadow-sm">
-              <i data-lucide="alert-triangle" class="text-[#703170] mb-2 w-5 h-5 md:w-6 md:h-6"></i>
-              <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2">Scam Prevention</h3>
-              <p class="text-gray-700 text-xs md:text-sm">Successfully prevented loan scam suicides through awareness campaigns and direct intervention.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Case Studies Section -->
-    <section class="py-8 md:py-12 lg:py-20 bg-white">
-      <div class="container mx-auto px-3 md:px-4">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 lg:mb-12">Case Studies & Impact</h2>
-        <div class="grid gap-4 md:gap-6 lg:gap-8 max-w-3xl mx-auto">
-          <div class="bg-white p-4 md:p-6 lg:p-8 rounded-lg border border-gray-200 shadow-sm">
-            <div class="flex flex-col md:flex-row md:items-start gap-3 md:gap-4 lg:gap-6">
-              <div class="bg-gray-50 p-2 md:p-3 rounded-lg self-start">
-                <i data-lucide="book-open" class="text-[#703170] w-5 h-5 md:w-6 md:h-6"></i>
-              </div>
-              <div>
-                <h3 class="text-lg md:text-xl lg:text-2xl font-semibold mb-1 md:mb-2 lg:mb-3">Loan Scam Awareness Campaign</h3>
-                <p class="text-gray-700 mb-2 md:mb-3 lg:mb-4 text-xs md:text-sm lg:text-base">Educated thousands of individuals about online loan scams, preventing countless frauds.</p>
-                <div class="bg-gray-50 px-2 py-1 md:px-3 md:py-2 rounded-lg inline-block">
-                  <p class="text-[#703170] font-semibold text-xs md:text-sm">Reached 100,000+ people through social media and workshops</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white p-4 md:p-6 lg:p-8 rounded-lg border border-gray-200 shadow-sm">
-            <div class="flex flex-col md:flex-row md:items-start gap-3 md:gap-4 lg:gap-6">
-              <div class="bg-gray-50 p-2 md:p-3 rounded-lg self-start">
-                <i data-lucide="users" class="text-[#703170] w-5 h-5 md:w-6 md:h-6"></i>
-              </div>
-              <div>
-                <h3 class="text-lg md:text-xl lg:text-2xl font-semibold mb-1 md:mb-2 lg:mb-3">Victim Support Program</h3>
-                <p class="text-gray-700 mb-2 md:mb-3 lg:mb-4 text-xs md:text-sm lg:text-base">Provided direct support to cyber fraud victims, helping them recover and prevent future incidents.</p>
-                <div class="bg-gray-50 px-2 py-1 md:px-3 md:py-2 rounded-lg inline-block">
-                  <p class="text-[#703170] font-semibold text-xs md:text-sm">Helped 500+ victims recover from cyber fraud</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="bg-white p-4 md:p-6 lg:p-8 rounded-lg border border-gray-200 shadow-sm">
-            <div class="flex flex-col md:flex-row md:items-start gap-3 md:gap-4 lg:gap-6">
-              <div class="bg-gray-50 p-2 md:p-3 rounded-lg self-start">
-                <i data-lucide="shield" class="text-[#703170] w-5 h-5 md:w-6 md:h-6"></i>
-              </div>
-              <div>
-                <h3 class="text-lg md:text-xl lg:text-2xl font-semibold mb-1 md:mb-2 lg:mb-3">Law Enforcement Training</h3>
-                <p class="text-gray-700 mb-2 md:mb-3 lg:mb-4 text-xs md:text-sm lg:text-base">Conducted specialized training sessions for police departments on cyber crime investigation.</p>
-                <div class="bg-gray-50 px-2 py-1 md:px-3 md:py-2 rounded-lg inline-block">
-                  <p class="text-[#703170] font-semibold text-xs md:text-sm">Provided comprehensive cybersecurity training to law enforcement</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Media & Recognition -->
-    <section class="py-8 md:py-12 lg:py-20 bg-gray-50">
-      <div class="container mx-auto px-3 md:px-4">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 lg:mb-12">Media & Recognition</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-3xl mx-auto">
-          <a 
-            href="https://www.youtube.com/watch?v=VY1PQfu4PKc&t=1330s&pp=ygUfbG9hbiBhcHAgc2NhbSB0YW1pbCBiZWhpbmR3b29kcw%3D%3D"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex items-center gap-3 md:gap-4 p-3 md:p-4 lg:p-6 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all"
-          >
-            <i data-lucide="youtube" class="text-[#703170] w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 flex-shrink-0"></i>
-            <div>
-              <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2">YouTube Feature</h3>
-              <p class="text-gray-700 text-xs md:text-sm">Watch our detailed coverage on loan app scams</p>
-            </div>
-          </a>
-          <a 
-            href="https://m.timesofindia.com/city/coimbatore/loan-app-firm-employees-arrested-for-harassing-and-cheating-woman-near-coimbatore/amp_articleshow/90377035.cms"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="flex items-center gap-3 md:gap-4 p-3 md:p-4 lg:p-6 bg-white rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all"
-          >
-            <i data-lucide="newspaper" class="text-[#703170] w-5 h-5 md:w-6 md:h-6 lg:w-8 lg:h-8 flex-shrink-0"></i>
-            <div>
-              <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2">Times of India Coverage</h3>
-              <p class="text-gray-700 text-xs md:text-sm">Read about our role in catching loan app scammers</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Blog Research Section -->
-    <section class="py-8 md:py-12 lg:py-20 bg-white">
-      <div class="container mx-auto px-3 md:px-4">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-6 md:mb-8 lg:mb-12">Research Publications</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 lg:gap-8 max-w-3xl mx-auto">
-          <a href="https://medium.com/bugbountywriteup/a-quick-price-manipulation-14c9244d7dca" 
-             target="_blank"
-             rel="noopener noreferrer"
-             class="bg-white p-3 md:p-4 lg:p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all">
-            <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2 lg:mb-4">A Quick Price Manipulation</h3>
-            <p class="text-gray-600 mb-2 md:mb-3 lg:mb-4 text-xs md:text-sm">Detailed analysis of a price manipulation vulnerability and its potential impact on e-commerce platforms.</p>
-            <div class="flex items-center text-[#703170]">
-              <i data-lucide="arrow-right" class="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2"></i>
-              <span class="text-xs">Read on Medium</span>
-            </div>
-          </a>
-
-          <a href="https://medium.com/bugbountywriteup/ssrf-in-redacted-com-how-i-found-and-reported-a-vulnerability-46df4202604f" 
-             target="_blank"
-             rel="noopener noreferrer"
-             class="bg-white p-3 md:p-4 lg:p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all">
-            <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2 lg:mb-4">SSRF Vulnerability Discovery</h3>
-            <p class="text-gray-600 mb-2 md:mb-3 lg:mb-4 text-xs md:text-sm">A comprehensive walkthrough of discovering and reporting a Server-Side Request Forgery vulnerability.</p>
-            <div class="flex items-center text-[#703170]">
-              <i data-lucide="arrow-right" class="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2"></i>
-              <span class="text-xs">Read on Medium</span>
-            </div>
-          </a>
-
-          <a href="https://medium.com/bugbountywriteup/get-blind-xss-within-5-minutes-100-9718bd056570" 
-             target="_blank"
-             rel="noopener noreferrer"
-             class="bg-white p-3 md:p-4 lg:p-6 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition-all">
-            <h3 class="text-base md:text-lg lg:text-xl font-semibold mb-1 md:mb-2 lg:mb-4">Quick Guide to Blind XSS</h3>
-            <p class="text-gray-600 mb-2 md:mb-3 lg:mb-4 text-xs md:text-sm">Learn how to identify and exploit Blind Cross-Site Scripting vulnerabilities in just 5 minutes.</p>
-            <div class="flex items-center text-[#703170]">
-              <i data-lucide="arrow-right" class="w-3 h-3 md:w-4 md:h-4 mr-1 md:mr-2"></i>
-              <span class="text-xs">Read on Medium</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="py-8 md:py-12 lg:py-20 bg-white">
-      <div class="container mx-auto px-3 md:px-4 text-center">
-        <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold mb-6 md:mb-8 lg:mb-12">Contact Us</h2>
-        <a 
-          href="mailto:elevate@thesociominds.com"
-          class="inline-flex items-center gap-2 bg-[#703170] hover:bg-[#8a4b8a] text-white px-4 py-2 md:px-6 md:py-2 lg:px-8 lg:py-3 rounded-full transition-all text-xs md:text-sm lg:text-base"
-        >
-          <i data-lucide="mail" class="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5"></i>
-          elevate@thesociominds.com
-        </a>
-      </div>
-    </section>
-  </div>
-
-  <!-- Footer with Copyright -->
-  <footer class="py-4 md:py-6 lg:py-8 bg-gray-50">
-    <div class="container mx-auto px-3 md:px-4">
-      <div class="text-center text-gray-600">
-        <p class="text-xs md:text-sm lg:text-base">&copy; 2024 The Sociominds. All rights reserved.</p>
-        <p class="mt-1 md:mt-2 text-xs">Securing the digital world through expertise and innovation.</p>
+<body class="bg-gray-50">
+  <!-- Hero Section -->
+  <section class="bg-primary text-white py-20">
+    <div class="container mx-auto px-4 text-center">
+      <img src="https://thesociominds.com/wp-content/uploads/2025/02/socio-png-1.png" alt="TheSocioMinds Logo" class="h-16 mx-auto mb-8">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">From Cyber Defenders to Digital Growth Experts</h1>
+      <p class="text-xl md:text-2xl mb-8">Securing the digital world, one company at a time</p>
+      <div class="flex justify-center">
+        <a href="#mission" class="bg-white text-primary font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition duration-300 mr-4">Learn More</a>
+        <a href="mailto:elevate@thesociominds.com" class="bg-transparent border-2 border-white text-white font-semibold px-6 py-3 rounded-lg hover:bg-white hover:text-primary transition duration-300">Contact Us</a>
       </div>
     </div>
-  </footer>
+  </section>
+
+  <!-- Mission Section -->
+  <section id="mission" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 section-heading">Our Mission</h2>
+      <div class="grid md:grid-cols-2 gap-12">
+        <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-semibold mb-4 text-primary">Starting as Cyber Defenders</h3>
+          <p class="text-gray-700 leading-relaxed">
+            We began our journey by securing top companies worldwide, protecting their digital assets and user data. Our expertise in cybersecurity has helped organizations identify vulnerabilities and strengthen their security posture against evolving threats.
+          </p>
+        </div>
+        <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-semibold mb-4 text-primary">Evolution to Growth Partners</h3>
+          <p class="text-gray-700 leading-relaxed">
+            Today, we help businesses grow digitally while maintaining robust security measures. We've expanded our services to include digital transformation strategies that prioritize both growth and security, ensuring our clients can innovate with confidence.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section id="achievements" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 section-heading">Cybersecurity Achievements</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="https://bughunters.google.com/profile/77fa3063-eb4c-41b8-8c08-051bec9cc64e" target="_blank" class="achievement-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo" class="h-8">
+          </div>
+          <p class="text-gray-700">Recognized in Google's Bug Hunters program for identifying critical vulnerabilities</p>
+        </a>
+        <a href="https://www.bbc.com/backstage/security-disclosure-policy/acknowledgements/" target="_blank" class="achievement-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/BBC_Logo_2021.svg" alt="BBC Logo" class="h-8">
+          </div>
+          <p class="text-gray-700">Acknowledged by BBC for responsible disclosure of security vulnerabilities</p>
+        </a>
+        <a href="https://unite.un.org/content/hall-fame/list" target="_blank" class="achievement-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/UN_emblem_blue.svg" alt="United Nations Logo" class="h-8">
+          </div>
+          <p class="text-gray-700">Featured in the United Nations Hall of Fame for security contributions</p>
+        </a>
+        <a href="https://drive.google.com/file/d/1tuDdLXPTTiK5YOrxbJxfsR9D7z6xTfmN/view" target="_blank" class="achievement-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://brands.home-assistant.io/_/mycroft/logo.png" alt="MYCROFT AI Logo" class="h-8">
+          </div>
+          <p class="text-gray-700">Recognized for identifying and helping resolve critical security issues</p>
+        </a>
+        <a href="https://drexel.edu/it/security/services-processes/bug-bounty/" target="_blank" class="achievement-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://secureia.drexel.edu/s/1683/form/16/images/logo.png" alt="DREXEL UNIVERSITY Logo" class="h-8">
+          </div>
+          <p class="text-gray-700">Acknowledged in Drexel University's bug bounty program</p>
+        </a>
+        <a href="https://drive.google.com/file/d/1hAmr0sQ9PPWPpYNe6xQa4XuehjmGUB5E/view" target="_blank" class="achievement-card bg-white p-6 rounded-lg shadow-md hover:shadow-lg">
+          <div class="flex items-center mb-4">
+            <img src="https://www.licious.in/image/rebranding/svg/licious-logo.svg" alt="LICIOUS Logo" class="h-8">
+          </div>
+          <p class="text-gray-700">Helped secure customer data and improve security infrastructure</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Law Enforcement Section -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl font-bold mb-6 section-heading">Law Enforcement Collaboration</h2>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            We've assisted law enforcement agencies in identifying and apprehending cyber criminals, making the internet safer for everyone. Our technical expertise has been crucial in numerous investigations, helping authorities track and prosecute digital threats.
+          </p>
+        </div>
+        <div>
+          <h2 class="text-3xl font-bold mb-6 section-heading">Scam Prevention</h2>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            We've successfully prevented loan scam suicides through awareness campaigns and direct intervention. By educating vulnerable populations and working with authorities, we've helped save lives and protect individuals from devastating financial fraud.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Studies Section -->
+  <section id="case-studies" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 section-heading">Case Studies & Impact</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-primary">Loan Scam Awareness Campaign</h3>
+          <p class="text-gray-700 mb-4">Educated thousands of individuals about online loan scams, preventing countless frauds.</p>
+          <div class="text-sm text-gray-600 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+            <span>Reached 100,000+ people through social media and workshops</span>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-primary">Victim Support Program</h3>
+          <p class="text-gray-700 mb-4">Provided direct support to cyber fraud victims, helping them recover and prevent future incidents.</p>
+          <div class="text-sm text-gray-600 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+            <span>Helped 500+ victims recover from cyber fraud</span>
+          </div>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold mb-3 text-primary">Law Enforcement Training</h3>
+          <p class="text-gray-700 mb-4">Conducted specialized training sessions for police departments on cyber crime investigation.</p>
+          <div class="text-sm text-gray-600 flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+            </svg>
+            <span>Provided comprehensive cybersecurity training to law enforcement</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Section -->
+  <section id="media" class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 section-heading">Media & Recognition</h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <a href="https://www.youtube.com/watch?v=VY1PQfu4PKc&t=1330s&pp=ygUfbG9hbiBhcHAgc2NhbSB0YW1pbCBiZWhpbmR3b29kcw%3D%3D" target="_blank" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-primary">YouTube Feature</h3>
+          </div>
+          <p class="text-gray-700">Watch our detailed coverage on loan app scams and how we're helping victims recover and prevent future incidents.</p>
+        </a>
+        <a href="https://www.youtube.com/watch?v=VY1PQfu4PKc&t=1330s&pp=ygUfbG9hbiBhcHAgc2NhbSB0YW1pbCBiZWhpbmR3b29kcw%3D%3D" target="_blank" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <div class="flex items-center mb-4">
+            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-primary">Times of India Coverage</h3>
+          </div>
+          <p class="text-gray-700">Read about our role in catching loan app scammers and our ongoing efforts to combat digital fraud.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section id="research" class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 section-heading">Research Publications</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <a href="https://infosecwriteups.com/get-blind-xss-within-5-minutes-100-9718bd056570" target="_blank" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <h3 class="text-xl font-semibold mb-3 text-primary">Blind XSS</h3>
+          <p class="text-gray-700 mb-4">A comprehensive guide to identifying and exploiting Blind Cross-Site Scripting vulnerabilities within minutes.</p>
+          <div class="flex justify-end">
+            <span class="text-primary font-medium">Read More →</span>
+          </div>
+        </a>
+        <a href="https://infosecwriteups.com/ssrf-in-redacted-com-how-i-found-and-reported-a-vulnerability-46df4202604f" target="_blank" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <h3 class="text-xl font-semibold mb-3 text-primary">Server Side Request Forgery</h3>
+          <p class="text-gray-700 mb-4">How we identified and reported a critical SSRF vulnerability in a major platform.</p>
+          <div class="flex justify-end">
+            <span class="text-primary font-medium">Read More →</span>
+          </div>
+        </a>
+        <a href="https://infosecwriteups.com/a-quick-price-manipulation-14c9244d7dca" target="_blank" class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+          <h3 class="text-xl font-semibold mb-3 text-primary">Price Manipulation</h3>
+          <p class="text-gray-700 mb-4">A case study on identifying and fixing price manipulation vulnerabilities in e-commerce platforms.</p>
+          <div class="flex justify-end">
+            <span class="text-primary font-medium">Read More →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cybersecurity Form Section -->
+  <section class="py-16 bg-black text-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 text-center">Cybersecurity Services</h2>
+      <div class="max-w-2xl mx-auto">
+        <form class="space-y-6">
+          <div>
+            <label for="name" class="block text-white font-medium mb-2">Name</label>
+            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" placeholder="Your name">
+          </div>
+          <div>
+            <label for="email" class="block text-white font-medium mb-2">Email</label>
+            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" placeholder="Your email">
+          </div>
+          <div>
+            <label for="service" class="block text-white font-medium mb-2">Service Required</label>
+            <select id="service" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent">
+              <option value="">Select a service</option>
+              <option value="security-audit">Security Audit</option>
+              <option value="penetration-testing">Penetration Testing</option>
+              <option value="vulnerability-assessment">Vulnerability Assessment</option>
+              <option value="security-training">Security Training</option>
+              <option value="incident-response">Incident Response</option>
+            </select>
+          </div>
+          <div>
+            <label for="message" class="block text-white font-medium mb-2">Message</label>
+            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-700 bg-gray-900 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent" placeholder="Describe your requirements"></textarea>
+          </div>
+          <div class="flex justify-end">
+            <button type="submit" class="bg-white text-black font-semibold px-6 py-3 rounded-md hover:bg-gray-200 transition duration-300">Submit Request</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="bg-gray-800 text-white py-4 text-center">
+    <p class="text-gray-400">&copy; 2025 thesociominds.com. All rights reserved. | <a href="mailto:elevate@thesociominds.com" class="text-white hover:text-gray-300">elevate@thesociominds.com</a></p>
+  </div>
 
   <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
-
-    // Smooth scroll functionality
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
-      });
+    // Form submission
+    document.querySelector('form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your interest! We will contact you shortly.');
     });
   </script>
 </body>
